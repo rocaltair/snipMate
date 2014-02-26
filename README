@@ -1,4 +1,4 @@
-This is a mirror of http://www.vim.org/scripts/script.php?script_id=2540
+`This is a mirror of http://www.vim.org/scripts/script.php?script_id=2540`
 
 snipMate.vim aims to be an unobtrusive, concise vim script that implements some of TextMate's snippets features in Vim. A snippet is a piece of often-typed text that you can insert into your document using a trigger word followed by a <tab>.
 
@@ -26,3 +26,14 @@ Bug reports, feature requests, etc. are welcome and can be emailed to me or subm
 If you would like to watch the development of this plugin, you can also follow it on github: http://github.com/msanders/snipmate.vim
 
 Enjoy!
+
+
+#changes By Roc
+
+###complete menu 
+	show description for triggers
+ 
+###hotkey for popup menu:
+	<c-x><c-n>
+
+

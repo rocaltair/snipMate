@@ -215,9 +215,9 @@ fun! ShowAvailableSnips()
 	let col   = col('.')
 	let word  = matchstr(getline('.'), '\S\+\%'.col.'c')
 	let words = [word]
-	if stridx(word, '.')
-		let words += split(word, '\.', 1)
-	endif
+	"if stridx(word, '.')
+	"	let words += split(word, '\.', 1)
+	"endif
 	let matchlen = 0
 	let matches = []
 	for scope in [bufnr('%')] + split(&ft, '\.') + ['_']
@@ -230,7 +230,17 @@ fun! ShowAvailableSnips()
 				if word == ''
 					let matches += [trigger] " Show all matches if word is empty
 				elseif trigger =~ '^'.word
-					let matches += [trigger]
+					let comment = ""
+					if has_key(s:multi_snips, scope)
+						if has_key(s:multi_snips[scope], trigger) 
+							for snip in s:multi_snips[scope][trigger]
+								let comment =  comment . snip[0] . " "
+							endfor
+						endif
+					endif
+
+					let item = {"word":trigger, "menu" : ":" . comment}
+					let matches += [item]
 					let len = len(word)
 					if len > matchlen | let matchlen = len | endif
 				endif
@@ -241,7 +251,7 @@ fun! ShowAvailableSnips()
 	" This is to avoid a bug with Vim when using complete(col - matchlen, matches)
 	" (Issue#46 on the Google Code snipMate issue tracker).
 	call setline(line('.'), substitute(line, repeat('.', matchlen).'\%'.col.'c', '', ''))
-	call complete(col, matches)
+	call complete(col, sort(matches))
 	return ''
 endf
 " vim:noet:sw=4:ts=4:ft=vim
