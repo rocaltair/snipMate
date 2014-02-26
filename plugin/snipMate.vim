@@ -234,7 +234,7 @@ fun! ShowAvailableSnips()
 					if has_key(s:multi_snips, scope)
 						if has_key(s:multi_snips[scope], trigger) 
 							for snip in s:multi_snips[scope][trigger]
-								let comment =  comment . snip[0] . " "
+								let comment =  comment . snip[0] . "; "
 							endfor
 						endif
 					endif

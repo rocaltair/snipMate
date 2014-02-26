@@ -28,7 +28,7 @@ If you would like to watch the development of this plugin, you can also follow i
 Enjoy!
 
 
-#changes By Roc
+#changes
 
 ###complete menu 
 	show description for triggers
