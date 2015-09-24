@@ -1,0 +1,381 @@
+snippet uv_loop_init int uv_loop_init(uv_loop_t* loop)
+	uv_loop_init(${1:uv_loop_t* loop});
+snippet uv_loop_configure int uv_loop_configure(uv_loop_t* loop, uv_loop_option option, ...)
+	uv_loop_configure(${1:uv_loop_t* loop}, ${2:uv_loop_option option}, ${3:...});
+snippet uv_loop_close int uv_loop_close(uv_loop_t* loop)
+	uv_loop_close(${1:uv_loop_t* loop});
+snippet uv_run int uv_run(uv_loop_t* loop, uv_run_mode mode)
+	uv_run(${1:uv_loop_t* loop}, ${2:uv_run_mode mode});
+snippet uv_loop_alive int uv_loop_alive(const uv_loop_t* loop)
+	uv_loop_alive(${1:const uv_loop_t* loop});
+snippet uv_stop void uv_stop(uv_loop_t* loop)
+	uv_stop(${1:uv_loop_t* loop});
+snippet uv_loop_size size_t uv_loop_size(void)
+	uv_loop_size(${1:void});
+snippet uv_backend_fd int uv_backend_fd(const uv_loop_t* loop)
+	uv_backend_fd(${1:const uv_loop_t* loop});
+snippet uv_backend_timeout int uv_backend_timeout(const uv_loop_t* loop)
+	uv_backend_timeout(${1:const uv_loop_t* loop});
+snippet uv_now uint64_t uv_now(const uv_loop_t* loop)
+	uv_now(${1:const uv_loop_t* loop});
+snippet uv_update_time void uv_update_time(uv_loop_t* loop)
+	uv_update_time(${1:uv_loop_t* loop});
+snippet uv_walk void uv_walk(uv_loop_t* loop, uv_walk_cb walk_cb, void* arg)
+	uv_walk(${1:uv_loop_t* loop}, ${2:uv_walk_cb walk_cb}, ${3:void* arg});
+snippet uv_is_active int uv_is_active(const uv_handle_t* handle)
+	uv_is_active(${1:const uv_handle_t* handle});
+snippet uv_is_closing int uv_is_closing(const uv_handle_t* handle)
+	uv_is_closing(${1:const uv_handle_t* handle});
+snippet uv_close void uv_close(uv_handle_t* handle, uv_close_cb close_cb)
+	uv_close(${1:uv_handle_t* handle}, ${2:uv_close_cb close_cb});
+snippet uv_ref void uv_ref(uv_handle_t* handle)
+	uv_ref(${1:uv_handle_t* handle});
+snippet uv_unref void uv_unref(uv_handle_t* handle)
+	uv_unref(${1:uv_handle_t* handle});
+snippet uv_has_ref int uv_has_ref(const uv_handle_t* handle)
+	uv_has_ref(${1:const uv_handle_t* handle});
+snippet uv_handle_size size_t uv_handle_size(uv_handle_type type)
+	uv_handle_size(${1:uv_handle_type type});
+snippet uv_send_buffer_size int uv_send_buffer_size(uv_handle_t* handle, int* value)
+	uv_send_buffer_size(${1:uv_handle_t* handle}, ${2:int* value});
+snippet uv_recv_buffer_size int uv_recv_buffer_size(uv_handle_t* handle, int* value)
+	uv_recv_buffer_size(${1:uv_handle_t* handle}, ${2:int* value});
+snippet uv_fileno int uv_fileno(const uv_handle_t* handle, uv_os_fd_t* fd)
+	uv_fileno(${1:const uv_handle_t* handle}, ${2:uv_os_fd_t* fd});
+snippet uv_cancel int uv_cancel(uv_req_t* req)
+	uv_cancel(${1:uv_req_t* req});
+snippet uv_req_size size_t uv_req_size(uv_req_type type)
+	uv_req_size(${1:uv_req_type type});
+snippet uv_timer_init int uv_timer_init(uv_loop_t* loop, uv_timer_t* handle)
+	uv_timer_init(${1:uv_loop_t* loop}, ${2:uv_timer_t* handle});
+snippet uv_timer_start int uv_timer_start(uv_timer_t* handle,	uv_timer_cb cb, uint64_t timeout, uint64_t repeat)
+	uv_timer_start(${1:uv_timer_t* handle},	uv_timer_cb ${2:cb}, ${3:uint64_t timeout}, ${4:uint64_t repeat});
+snippet uv_timer_stop int uv_timer_stop(uv_timer_t* handle)
+	uv_timer_stop(${1:uv_timer_t* handle});
+snippet uv_timer_again int uv_timer_again(uv_timer_t* handle)
+	uv_timer_again(${1:uv_timer_t* handle});
+snippet uv_timer_set_repeat void uv_timer_set_repeat(uv_timer_t* handle, uint64_t repeat)
+	uv_timer_set_repeat(${1:uv_timer_t* handle}, ${2:uint64_t repeat});
+snippet uv_timer_get_repeat uint64_t uv_timer_get_repeat(const uv_timer_t* handle)
+	uv_timer_get_repeat(${1:const uv_timer_t* handle});
+snippet uv_prepare_init int uv_prepare_init(uv_loop_t* loop, uv_prepare_t* prepare)
+	uv_prepare_init(${1:uv_loop_t* loop}, ${2:uv_prepare_t* prepare});
+snippet uv_prepare_start int uv_prepare_start(uv_prepare_t* prepare, uv_prepare_cb cb)
+	uv_prepare_start(${1:uv_prepare_t* prepare}, ${2:uv_prepare_cb cb});
+snippet uv_prepare_stop int uv_prepare_stop(uv_prepare_t* prepare)
+	uv_prepare_stop(${1:uv_prepare_t* prepare});
+snippet uv_check_init int uv_check_init(uv_loop_t*, uv_check_t* check)
+	uv_check_init(${1:uv_loop_t*}, ${2:uv_check_t* check});
+snippet uv_check_start int uv_check_start(uv_check_t* check, uv_check_cb cb)
+	uv_check_start(${1:uv_check_t* check}, ${2:uv_check_cb cb});
+snippet uv_check_stop int uv_check_stop(uv_check_t* check)
+	uv_check_stop(${1:uv_check_t* check});
+snippet uv_idle_init int uv_idle_init(uv_loop_t*, uv_idle_t* idle)
+	uv_idle_init(${1:uv_loop_t*}, ${2:uv_idle_t* idle});
+snippet uv_idle_start int uv_idle_start(uv_idle_t* idle, uv_idle_cb cb)
+	uv_idle_start(${1:uv_idle_t* idle}, ${2:uv_idle_cb cb});
+snippet uv_idle_stop int uv_idle_stop(uv_idle_t* idle)
+	uv_idle_stop(${1:uv_idle_t* idle});
+snippet uv_async_send int uv_async_send(uv_async_t* async)
+	uv_async_send(${1:uv_async_t* async});
+snippet uv_poll_init int uv_poll_init(uv_loop_t* loop, uv_poll_t* handle, int fd)
+	uv_poll_init(${1:uv_loop_t* loop}, ${2:uv_poll_t* handle}, ${3:int fd});
+snippet uv_poll_start int uv_poll_start(uv_poll_t* handle, int events, uv_poll_cb cb)
+	uv_poll_start(${1:uv_poll_t* handle}, ${2:int events}, ${3:uv_poll_cb cb});
+snippet uv_poll_stop int uv_poll_stop(uv_poll_t* poll)
+	uv_poll_stop(${1:uv_poll_t* poll});
+snippet uv_signal_init int uv_signal_init(uv_loop_t*, uv_signal_t* signal)
+	uv_signal_init(${1:uv_loop_t*}, ${2:uv_signal_t* signal});
+snippet uv_signal_start int uv_signal_start(uv_signal_t* signal, uv_signal_cb cb, int signum)
+	uv_signal_start(${1:uv_signal_t* signal}, ${2:uv_signal_cb cb}, ${3:int signum});
+snippet uv_signal_stop int uv_signal_stop(uv_signal_t* signal)
+	uv_signal_stop(${1:uv_signal_t* signal});
+snippet uv_disable_stdio_inheritance void uv_disable_stdio_inheritance(void)
+	uv_disable_stdio_inheritance(${1:void});
+snippet uv_spawn int uv_spawn(uv_loop_t* loop, uv_process_t* handle, const uv_process_options_t* options)
+	uv_spawn(${1:uv_loop_t* loop}, ${2:uv_process_t* handle}, ${3:const uv_process_options_t* options});
+snippet uv_process_kill int uv_process_kill(uv_process_t* handle, int signum)
+	uv_process_kill(${1:uv_process_t* handle}, ${2:int signum});
+snippet uv_kill int uv_kill(int pid, int signum)
+	uv_kill(${1:int pid}, ${2:int signum});
+snippet uv_shutdown int uv_shutdown(uv_shutdown_t* req, uv_stream_t* handle, uv_shutdown_cb cb)
+	uv_shutdown(${1:uv_shutdown_t* req}, ${2:uv_stream_t* handle}, ${3:uv_shutdown_cb cb});
+snippet uv_listen int uv_listen(uv_stream_t* stream, int backlog, uv_connection_cb cb)
+	uv_listen(${1:uv_stream_t* stream}, ${2:int backlog}, ${3:uv_connection_cb cb});
+snippet uv_accept int uv_accept(uv_stream_t* server, uv_stream_t* client)
+	uv_accept(${1:uv_stream_t* server}, ${2:uv_stream_t* client});
+snippet uv_read_stop int uv_read_stop(uv_stream_t*)
+	uv_read_stop(${1:uv_stream_t*});
+snippet uv_try_write int uv_try_write(uv_stream_t* handle, const uv_buf_t bufs[], unsigned int nbufs)
+	uv_try_write(${1:uv_stream_t* handle}, ${2:const uv_buf_t bufs[]}, ${3:unsigned int nbufs});
+snippet uv_is_readable int uv_is_readable(const uv_stream_t* handle)
+	uv_is_readable(${1:const uv_stream_t* handle});
+snippet uv_is_writable int uv_is_writable(const uv_stream_t* handle)
+	uv_is_writable(${1:const uv_stream_t* handle});
+snippet uv_stream_set_blocking int uv_stream_set_blocking(uv_stream_t* handle, int blocking)
+	uv_stream_set_blocking(${1:uv_stream_t* handle}, ${2:int blocking});
+snippet uv_tcp_init int uv_tcp_init(uv_loop_t*, uv_tcp_t* handle)
+	uv_tcp_init(${1:uv_loop_t*}, ${2:uv_tcp_t* handle});
+snippet uv_tcp_open int uv_tcp_open(uv_tcp_t* handle, uv_os_sock_t sock)
+	uv_tcp_open(${1:uv_tcp_t* handle}, ${2:uv_os_sock_t sock});
+snippet uv_tcp_nodelay int uv_tcp_nodelay(uv_tcp_t* handle, int enable)
+	uv_tcp_nodelay(${1:uv_tcp_t* handle}, ${2:int enable});
+snippet uv_tcp_keepalive int uv_tcp_keepalive(uv_tcp_t* handle, int enable, unsigned int delay)
+	uv_tcp_keepalive(${1:uv_tcp_t* handle}, ${2:int enable}, ${3:unsigned int delay});
+snippet uv_tcp_simultaneous_accepts int uv_tcp_simultaneous_accepts(uv_tcp_t* handle, int enable)
+	uv_tcp_simultaneous_accepts(${1:uv_tcp_t* handle}, ${2:int enable});
+snippet uv_tcp_bind int uv_tcp_bind(uv_tcp_t* handle, const struct sockaddr* addr, unsigned int flags)
+	uv_tcp_bind(${1:uv_tcp_t* handle}, ${2:const struct sockaddr* addr}, ${3:unsigned int flags});
+snippet uv_tcp_getsockname int uv_tcp_getsockname(const uv_tcp_t* handle, struct sockaddr* name, int* namelen)
+	uv_tcp_getsockname(${1:const uv_tcp_t* handle}, ${2:struct sockaddr* name}, ${3:int* namelen});
+snippet uv_tcp_getpeername int uv_tcp_getpeername(const uv_tcp_t* handle, struct sockaddr* name, int* namelen)
+	uv_tcp_getpeername(${1:const uv_tcp_t* handle}, ${2:struct sockaddr* name}, ${3:int* namelen});
+snippet uv_tcp_connect int uv_tcp_connect(uv_connect_t* req, uv_tcp_t* handle, const struct sockaddr* addr, uv_connect_cb cb)
+	uv_tcp_connect(${1:uv_connect_t* req}, ${2:uv_tcp_t* handle}, ${3:const struct sockaddr* addr}, ${4:uv_connect_cb cb});
+snippet uv_pipe_init int uv_pipe_init(uv_loop_t*, uv_pipe_t* handle, int ipc)
+	uv_pipe_init(${1:uv_loop_t*}, ${2:uv_pipe_t* handle}, ${3:int ipc});
+snippet uv_pipe_open int uv_pipe_open(uv_pipe_t*, uv_file file)
+	uv_pipe_open(${1:uv_pipe_t*}, ${2:uv_file file});
+snippet uv_pipe_bind int uv_pipe_bind(uv_pipe_t* handle, const char* name)
+	uv_pipe_bind(${1:uv_pipe_t* handle}, ${2:const char* name});
+snippet uv_pipe_connect void uv_pipe_connect(uv_connect_t* req, uv_pipe_t* handle, const char* name, uv_connect_cb cb)
+	uv_pipe_connect(${1:uv_connect_t* req}, ${2:uv_pipe_t* handle}, ${3:const char* name}, ${4:uv_connect_cb cb});
+snippet uv_pipe_getsockname int uv_pipe_getsockname(const uv_pipe_t* handle, char* buffer, size_t* size)
+	uv_pipe_getsockname(${1:const uv_pipe_t* handle}, ${2:char* buffer}, ${3:size_t* size});
+snippet uv_pipe_getpeername int uv_pipe_getpeername(const uv_pipe_t* handle, char* buffer, size_t* size)
+	uv_pipe_getpeername(${1:const uv_pipe_t* handle}, ${2:char* buffer}, ${3:size_t* size});
+snippet uv_pipe_pending_instances void uv_pipe_pending_instances(uv_pipe_t* handle, int count)
+	uv_pipe_pending_instances(${1:uv_pipe_t* handle}, ${2:int count});
+snippet uv_pipe_pending_count int uv_pipe_pending_count(uv_pipe_t* handle)
+	uv_pipe_pending_count(${1:uv_pipe_t* handle});
+snippet uv_pipe_pending_type uv_handle_type uv_pipe_pending_type(uv_pipe_t* handle)
+	uv_pipe_pending_type(${1:uv_pipe_t* handle});
+snippet uv_tty_init int uv_tty_init(uv_loop_t*, uv_tty_t*, uv_file fd, int readable)
+	uv_tty_init(${1:uv_loop_t*}, ${2:uv_tty_t*}, ${3:uv_file fd}, ${4:int readable});
+snippet uv_tty_set_mode int uv_tty_set_mode(uv_tty_t*, uv_tty_mode_t mode)
+	uv_tty_set_mode(${1:uv_tty_t*}, ${2:uv_tty_mode_t mode});
+snippet uv_tty_reset_mode int uv_tty_reset_mode(void)
+	uv_tty_reset_mode(${1:void});
+snippet uv_tty_get_winsize int uv_tty_get_winsize(uv_tty_t*, int* width, int* height)
+	uv_tty_get_winsize(${1:uv_tty_t*}, ${2:int* width}, ${3:int* height});
+snippet uv_udp_init int uv_udp_init(uv_loop_t*, uv_udp_t* handle)
+	uv_udp_init(${1:uv_loop_t*}, ${2:uv_udp_t* handle});
+snippet uv_udp_open int uv_udp_open(uv_udp_t* handle, uv_os_sock_t sock)
+	uv_udp_open(${1:uv_udp_t* handle}, ${2:uv_os_sock_t sock});
+snippet uv_udp_bind int uv_udp_bind(uv_udp_t* handle, const struct sockaddr* addr, unsigned int flags)
+	uv_udp_bind(${1:});
+snippet uv_udp_getsockname int uv_udp_getsockname(const uv_udp_t* handle, struct sockaddr* name, int* namelen)
+	uv_udp_getsockname(${1:const uv_udp_t* handle}, ${2:struct sockaddr* name}, ${3:int* namelen});
+snippet uv_udp_set_membership int uv_udp_set_membership(uv_udp_t* handle, const char* multicast_addr, uv_membership membership)
+	uv_udp_set_membership(${1:uv_udp_t* handle}, ${2:const char* multicast_addr}, ${3:uv_membership membership});
+snippet uv_udp_set_multicast_loop int uv_udp_set_multicast_loop(uv_udp_t* handle, int on)
+	uv_udp_set_multicast_loop(${1:uv_udp_t* handle}, ${2:int on});
+snippet uv_udp_set_multicast_ttl int uv_udp_set_multicast_ttl(uv_udp_t* handle, int ttl)
+	uv_udp_set_multicast_ttl(${1:uv_udp_t* handle}, ${2:int ttl});
+snippet uv_udp_set_multicast_interface int uv_udp_set_multicast_interface(uv_udp_t* handle, const char* interface_addr)
+	uv_udp_set_multicast_interface(${1:uv_udp_t* handle}, ${2:const char* interface_addr});
+snippet uv_udp_set_broadcast int uv_udp_set_broadcast(uv_udp_t* handle, int on)
+	uv_udp_set_broadcast(${1:uv_udp_t* handle}, ${2:int on});
+snippet uv_udp_set_ttl int uv_udp_set_ttl(uv_udp_t* handle, int ttl)
+	uv_udp_set_ttl(${1:uv_udp_t* handle}, ${2:int ttl});
+snippet uv_udp_send int uv_udp_send(uv_udp_send_t* req, uv_udp_t* handle, const uv_buf_t bufs[], unsigned int nbufs, const struct sockaddr* addr, uv_udp_send_cb send_cb)
+	uv_udp_send(${1:uv_udp_send_t* req}, ${2:uv_udp_t* handle}, ${3:const uv_buf_t bufs[]}, ${4:unsigned int nbufs}, ${5:const struct sockaddr* addr}, ${6:uv_udp_send_cb send_cb});
+snippet uv_udp_try_send int uv_udp_try_send(uv_udp_t* handle, const uv_buf_t bufs[], unsigned int nbufs, const struct sockaddr* addr)
+	uv_udp_try_send(${1:uv_udp_t* handle}, ${2:const uv_buf_t bufs[]}, ${3:unsigned int nbufs}, ${4:const struct sockaddr* addr});
+snippet uv_udp_recv_stop int uv_udp_recv_stop(uv_udp_t* handle)
+	uv_udp_recv_stop(${1:uv_udp_t* handle});
+snippet uv_fs_event_init int uv_fs_event_init(uv_loop_t* loop, uv_fs_event_t* handle)
+	uv_fs_event_init(${1:uv_loop_t* loop}, ${2:uv_fs_event_t* handle});
+snippet uv_fs_event_start int uv_fs_event_start(uv_fs_event_t* handle, uv_fs_event_cb cb, const char* path, unsigned int flags)
+	uv_fs_event_start(${1:uv_fs_event_t* handle}, ${2:uv_fs_event_cb cb}, ${3:const char* path}, ${4:unsigned int flags});
+snippet uv_fs_event_stop int uv_fs_event_stop(uv_fs_event_t* handle)
+	uv_fs_event_stop(${1:uv_fs_event_t* handle});
+snippet uv_fs_poll_init int uv_fs_poll_init(uv_loop_t* loop, uv_fs_poll_t* handle)
+	uv_fs_poll_init(${1:uv_loop_t* loop}, ${2:uv_fs_poll_t* handle});
+snippet uv_fs_poll_start int uv_fs_poll_start(uv_fs_poll_t* handle, uv_fs_poll_cb poll_cb, const char* path, unsigned int interval)
+	uv_fs_poll_start(${1:uv_fs_poll_t* handle}, ${2:uv_fs_poll_cb poll_cb}, ${3:const char* path}, ${4:unsigned int interval});
+snippet uv_fs_poll_stop int uv_fs_poll_stop(uv_fs_poll_t* handle)
+	uv_fs_poll_stop(${1:uv_fs_poll_t* handle});
+snippet uv_fs_req_cleanup void uv_fs_req_cleanup(uv_fs_t* req)
+	uv_fs_req_cleanup(${1:uv_fs_t* req});
+snippet uv_fs_close int uv_fs_close(uv_loop_t* loop, uv_fs_t* req, uv_file file, uv_fs_cb cb)
+	uv_fs_close(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:uv_file file}, ${4:uv_fs_cb cb});
+snippet uv_fs_open int uv_fs_open(uv_loop_t* loop, uv_fs_t* req, const char* path, int flags, int mode, uv_fs_cb cb)
+	uv_fs_open(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:const char* path}, ${4:int flags}, ${5:int mode}, ${6:uv_fs_cb cb});
+snippet uv_fs_read int uv_fs_read(uv_loop_t* loop, uv_fs_t* req, uv_file file, const uv_buf_t bufs[], unsigned int nbufs, int64_t offset, uv_fs_cb cb)
+	uv_fs_read(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:uv_file file}, ${4:const uv_buf_t bufs[]}, ${5:unsigned int nbufs}, ${6:int64_t offset}, ${7:uv_fs_cb cb});
+snippet uv_fs_unlink int uv_fs_unlink(uv_loop_t* loop, uv_fs_t* req, const char* path, uv_fs_cb cb)
+	uv_fs_unlink(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:const char* path}, ${4:uv_fs_cb cb});
+snippet uv_fs_write int uv_fs_write(uv_loop_t* loop, uv_fs_t* req, uv_file file, const uv_buf_t bufs[], unsigned int nbufs, int64_t offset, uv_fs_cb cb)
+	uv_fs_write(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:uv_file file}, ${4:const uv_buf_t bufs[]}, ${5:unsigned int nbufs}, ${6:int64_t offset}, ${7:uv_fs_cb cb});
+snippet uv_fs_mkdir int uv_fs_mkdir(uv_loop_t* loop, uv_fs_t* req, const char* path, int mode, uv_fs_cb cb)
+	uv_fs_mkdir(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:const char* path}, ${4:int mode}, ${5:uv_fs_cb cb});
+snippet uv_fs_mkdtemp int uv_fs_mkdtemp(uv_loop_t* loop, uv_fs_t* req, const char* tpl, uv_fs_cb cb)
+	uv_fs_mkdtemp(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:const char* tpl}, ${4:uv_fs_cb cb});
+snippet uv_fs_rmdir int uv_fs_rmdir(uv_loop_t* loop, uv_fs_t* req, const char* path, uv_fs_cb cb)
+	uv_fs_rmdir(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:const char* path}, ${4:uv_fs_cb cb});
+snippet uv_fs_scandir int uv_fs_scandir(uv_loop_t* loop, uv_fs_t* req, const char* path, int flags, uv_fs_cb cb)
+	uv_fs_scandir(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:const char* path}, ${4:int flags}, ${5:uv_fs_cb cb});
+snippet uv_fs_scandir_next int uv_fs_scandir_next(uv_fs_t* req, uv_dirent_t* ent)
+	uv_fs_scandir_next(${1:uv_fs_t* req}, ${2:uv_dirent_t* ent});
+snippet uv_fs_stat int uv_fs_stat(uv_loop_t* loop, uv_fs_t* req, const char* path, uv_fs_cb cb)
+	uv_fs_stat(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:const char* path}, ${4:uv_fs_cb cb});
+snippet uv_fs_fstat int uv_fs_fstat(uv_loop_t* loop, uv_fs_t* req, uv_file file, uv_fs_cb cb)
+	uv_fs_fstat(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:uv_file file}, ${4:uv_fs_cb cb});
+snippet uv_fs_lstat int uv_fs_lstat(uv_loop_t* loop, uv_fs_t* req, const char* path, uv_fs_cb cb)
+	uv_fs_lstat(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:const char* path}, ${4:uv_fs_cb cb});
+snippet uv_fs_rename int uv_fs_rename(uv_loop_t* loop, uv_fs_t* req, const char* path, const char* new_path, uv_fs_cb cb)
+	uv_fs_rename(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:const char* path}, ${4:const char* new_path}, ${5:uv_fs_cb cb});
+snippet uv_fs_fsync int uv_fs_fsync(uv_loop_t* loop, uv_fs_t* req, uv_file file, uv_fs_cb cb)
+	uv_fs_fsync(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:uv_file file}, ${4:uv_fs_cb cb});
+snippet uv_fs_fdatasync int uv_fs_fdatasync(uv_loop_t* loop, uv_fs_t* req, uv_file file, uv_fs_cb cb)
+	uv_fs_fdatasync(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:uv_file file}, ${4:uv_fs_cb cb});
+snippet uv_fs_ftruncate int uv_fs_ftruncate(uv_loop_t* loop, uv_fs_t* req, uv_file file, int64_t offset, uv_fs_cb cb)
+	uv_fs_ftruncate(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:uv_file file}, ${4:int64_t offset}, ${5:uv_fs_cb cb});
+snippet uv_fs_sendfile int uv_fs_sendfile(uv_loop_t* loop, uv_fs_t* req, uv_file out_fd, uv_file in_fd, int64_t in_offset, size_t length, uv_fs_cb cb)
+	uv_fs_sendfile(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:uv_file out_fd}, ${4:uv_file in_fd}, ${5:int64_t in_offset}, ${6:size_t length}, ${7:uv_fs_cb cb});
+snippet uv_fs_access int uv_fs_access(uv_loop_t* loop, uv_fs_t* req, const char* path, int mode, uv_fs_cb cb)
+	uv_fs_access(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:const char* path}, ${4:int mode}, ${5:uv_fs_cb cb});
+snippet uv_fs_chmod int uv_fs_chmod(uv_loop_t* loop, uv_fs_t* req, const char* path, int mode, uv_fs_cb cb)
+	uv_fs_chmod(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:const char* path}, ${4:int mode}, ${5:uv_fs_cb cb});
+snippet uv_fs_fchmod int uv_fs_fchmod(uv_loop_t* loop, uv_fs_t* req, uv_file file, int mode, uv_fs_cb cb)
+	uv_fs_fchmod(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:uv_file file}, ${4:int mode}, ${5:uv_fs_cb cb});
+snippet uv_fs_utime int uv_fs_utime(uv_loop_t* loop, uv_fs_t* req, const char* path, double atime, double mtime, uv_fs_cb cb)
+	uv_fs_utime(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:const char* path}, ${4:double atime}, ${5:double mtime}, ${6:uv_fs_cb cb});
+snippet uv_fs_futime int uv_fs_futime(uv_loop_t* loop, uv_fs_t* req, uv_file file, double atime, double mtime, uv_fs_cb cb)
+	uv_fs_futime(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:uv_file file}, ${4:double atime}, ${5:double mtime}, ${6:uv_fs_cb cb});
+snippet uv_fs_link int uv_fs_link(uv_loop_t* loop, uv_fs_t* req, const char* path, const char* new_path, uv_fs_cb cb)
+	uv_fs_link(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:const char* path}, ${4:const char* new_path}, ${5:uv_fs_cb cb});
+snippet uv_fs_symlink int uv_fs_symlink(uv_loop_t* loop, uv_fs_t* req, const char* path, const char* new_path, int flags, uv_fs_cb cb)
+	uv_fs_symlink(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:const char* path}, ${4:const char* new_path}, ${5:int flags}, ${6:uv_fs_cb cb});
+snippet uv_fs_readlink int uv_fs_readlink(uv_loop_t* loop, uv_fs_t* req, const char* path, uv_fs_cb cb)
+	uv_fs_readlink(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:const char* path}, ${4:uv_fs_cb cb});
+snippet uv_fs_chown int uv_fs_chown(uv_loop_t* loop, uv_fs_t* req, const char* path, uv_uid_t uid, uv_gid_t gid, uv_fs_cb cb)
+	uv_fs_chown(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:const char* path}, ${4:uv_uid_t uid}, ${5:uv_gid_t gid}, ${6:uv_fs_cb cb});
+snippet uv_fs_fchown int uv_fs_fchown(uv_loop_t* loop, uv_fs_t* req, uv_file file, uv_uid_t uid, uv_gid_t gid, uv_fs_cb cb)
+	uv_fs_fchown(${1:uv_loop_t* loop}, ${2:uv_fs_t* req}, ${3:uv_file file}, ${4:uv_uid_t uid}, ${5:uv_gid_t gid}, ${6:uv_fs_cb cb});
+snippet uv_queue_work int uv_queue_work(uv_loop_t* loop, uv_work_t* req, uv_work_cb work_cb, uv_after_work_cb after_work_cb)
+	uv_queue_work(${1:uv_loop_t* loop}, ${2:uv_work_t* req}, ${3:uv_work_cb work_cb, uv_after_work_cb after_work_cb});
+snippet uv_getaddrinfo int uv_getaddrinfo(uv_loop_t* loop, uv_getaddrinfo_t* req, uv_getaddrinfo_cb getaddrinfo_cb, const char* node, const char* service, const struct addrinfo* hints)
+	uv_getaddrinfo(${1:uv_loop_t* loop}, ${2:uv_getaddrinfo_t* req}, ${3:uv_getaddrinfo_cb getaddrinfo_cb, const char* node, const char* service}, ${6:const struct addrinfo* hints});
+snippet uv_freeaddrinfo void uv_freeaddrinfo(struct addrinfo* ai)
+	uv_freeaddrinfo(${1:struct addrinfo* ai});
+snippet uv_getnameinfo int uv_getnameinfo(uv_loop_t* loop, uv_getnameinfo_t* req, uv_getnameinfo_cb getnameinfo_cb, const struct sockaddr* addr, int flags)
+	uv_getnameinfo(${1:uv_loop_t* loop}, ${2:uv_getnameinfo_t* req}, ${3:uv_getnameinfo_cb getnameinfo_cb, const struct sockaddr* addr, int flags});
+snippet uv_dlopen int uv_dlopen(const char* filename, uv_lib_t* lib)
+	uv_dlopen(${1:const char* filename}, ${2:uv_lib_t* lib});
+snippet uv_dlclose void uv_dlclose(uv_lib_t* lib)
+	uv_dlclose(${1:uv_lib_t* lib});
+snippet uv_thread_create int uv_thread_create(uv_thread_t* tid, uv_thread_cb entry, void* arg)
+	uv_thread_create(${1:uv_thread_t* tid}, ${2:uv_thread_cb entry}, ${3:void* arg});
+snippet uv_thread_self uv_thread_t uv_thread_self(void)
+	uv_thread_self(${1:void});
+snippet uv_thread_join int uv_thread_join(uv_thread_t *tid)
+	uv_thread_join(${1:uv_thread_t *tid});
+snippet uv_thread_equal int uv_thread_equal(const uv_thread_t* t1, const uv_thread_t* t2)
+	uv_thread_equal(${1:const uv_thread_t* t1}, ${2:const uv_thread_t* t2});
+snippet uv_key_create int uv_key_create(uv_key_t* key)
+	uv_key_create(${1:uv_key_t* key});
+snippet uv_key_delete void uv_key_delete(uv_key_t* key)
+	uv_key_delete(${1:uv_key_t* key});
+snippet uv_key_set void uv_key_set(uv_key_t* key, void* value)
+	uv_key_set(${1:uv_key_t* key}, ${2:void* value});
+snippet uv_once void uv_once(uv_once_t* guard, void (*callback)(void))
+	uv_once(${1:uv_once_t* guard}, ${2:void (*callback)(void)});
+snippet uv_mutex_init int uv_mutex_init(uv_mutex_t* handle)
+	uv_mutex_init(${1:uv_mutex_t* handle});
+snippet uv_mutex_destroy void uv_mutex_destroy(uv_mutex_t* handle)
+	uv_mutex_destroy(${1:uv_mutex_t* handle});
+snippet uv_mutex_lock void uv_mutex_lock(uv_mutex_t* handle)
+	uv_mutex_lock(${1:uv_mutex_t* handle});
+snippet uv_mutex_trylock int uv_mutex_trylock(uv_mutex_t* handle)
+	uv_mutex_trylock(${1:uv_mutex_t* handle});
+snippet uv_mutex_unlock void uv_mutex_unlock(uv_mutex_t* handle)
+	uv_mutex_unlock(${1:uv_mutex_t* handle});
+snippet uv_rwlock_init int uv_rwlock_init(uv_rwlock_t* rwlock)
+	uv_rwlock_init(${1:uv_rwlock_t* rwlock});
+snippet uv_rwlock_destroy void uv_rwlock_destroy(uv_rwlock_t* rwlock)
+	uv_rwlock_destroy(${1:uv_rwlock_t* rwlock});
+snippet uv_rwlock_rdlock void uv_rwlock_rdlock(uv_rwlock_t* rwlock)
+	uv_rwlock_rdlock(${1:uv_rwlock_t* rwlock});
+snippet uv_rwlock_tryrdlock int uv_rwlock_tryrdlock(uv_rwlock_t* rwlock)
+	uv_rwlock_tryrdlock(${1:uv_rwlock_t* rwlock});
+snippet uv_rwlock_rdunlock void uv_rwlock_rdunlock(uv_rwlock_t* rwlock)
+	uv_rwlock_rdunlock(${1:uv_rwlock_t* rwlock});
+snippet uv_rwlock_wrlock void uv_rwlock_wrlock(uv_rwlock_t* rwlock)
+	uv_rwlock_wrlock(${1:uv_rwlock_t* rwlock});
+snippet uv_rwlock_trywrlock int uv_rwlock_trywrlock(uv_rwlock_t* rwlock)
+	uv_rwlock_trywrlock(${1:uv_rwlock_t* rwlock});
+snippet uv_rwlock_wrunlock void uv_rwlock_wrunlock(uv_rwlock_t* rwlock)
+	uv_rwlock_wrunlock(${1:uv_rwlock_t* rwlock});
+snippet uv_sem_init int uv_sem_init(uv_sem_t* sem, unsigned int value)
+	uv_sem_init(${1:uv_sem_t* sem}, ${2:unsigned int value});
+snippet uv_sem_destroy void uv_sem_destroy(uv_sem_t* sem)
+	uv_sem_destroy(${1:uv_sem_t* sem});
+snippet uv_sem_post void uv_sem_post(uv_sem_t* sem)
+	uv_sem_post(${1:uv_sem_t* sem});
+snippet uv_sem_wait void uv_sem_wait(uv_sem_t* sem)
+	uv_sem_wait(${1:uv_sem_t* sem});
+snippet uv_sem_trywait int uv_sem_trywait(uv_sem_t* sem)
+	uv_sem_trywait(${1:uv_sem_t* sem});
+snippet uv_cond_init int uv_cond_init(uv_cond_t* cond)
+	uv_cond_init(${1:uv_cond_t* cond});
+snippet uv_cond_destroy void uv_cond_destroy(uv_cond_t* cond)
+	uv_cond_destroy(${1:uv_cond_t* cond});
+snippet uv_cond_signal void uv_cond_signal(uv_cond_t* cond)
+	uv_cond_signal(${1:uv_cond_t* cond});
+snippet uv_cond_broadcast void uv_cond_broadcast(uv_cond_t* cond)
+	uv_cond_broadcast(${1:uv_cond_t* cond});
+snippet uv_cond_wait void uv_cond_wait(uv_cond_t* cond, uv_mutex_t* mutex)
+	uv_cond_wait(${1:uv_cond_t* cond}, ${2:uv_mutex_t* mutex});
+snippet uv_barrier_init int uv_barrier_init(uv_barrier_t* barrier, unsigned int count)
+	uv_barrier_init(${1:uv_barrier_t* barrier}, ${2:unsigned int count});
+snippet uv_barrier_destroy void uv_barrier_destroy(uv_barrier_t* barrier)
+	uv_barrier_destroy(${1:uv_barrier_t* barrier});
+snippet uv_barrier_wait int uv_barrier_wait(uv_barrier_t* barrier)
+	uv_barrier_wait(${1:uv_barrier_t* barrier});
+snippet uv_guess_handle uv_handle_type uv_guess_handle(uv_file file)
+	uv_guess_handle(${1:uv_file file});
+snippet uv_version unsigned int uv_version(void)
+	uv_version(${1:void});
+snippet uv_buf_init uv_buf_t uv_buf_init(char* base, unsigned int len)
+	uv_buf_init(${1:char* base}, ${2:unsigned int len});
+snippet uv_get_process_title int uv_get_process_title(char* buffer, size_t size)
+	uv_get_process_title(${1:char* buffer}, ${2:size_t size});
+snippet uv_set_process_title int uv_set_process_title(const char* title)
+	uv_set_process_title(${1:const char* title});
+snippet uv_resident_set_memory int uv_resident_set_memory(size_t* rss)
+	uv_resident_set_memory(${1:size_t* rss});
+snippet uv_uptime int uv_uptime(double* uptime)
+	uv_uptime(${1:double* uptime});
+snippet uv_getrusage int uv_getrusage(uv_rusage_t* rusage)
+	uv_getrusage(${1:uv_rusage_t* rusage});
+snippet uv_cpu_info int uv_cpu_info(uv_cpu_info_t** cpu_infos, int* count)
+	uv_cpu_info(${1:uv_cpu_info_t** cpu_infos}, ${2:int* count});
+snippet uv_free_cpu_info void uv_free_cpu_info(uv_cpu_info_t* cpu_infos, int count)
+	uv_free_cpu_info(${1:uv_cpu_info_t* cpu_infos}, ${2:int count});
+snippet uv_loadavg void uv_loadavg(double avg[3])
+	uv_loadavg(${1:double avg[3]});
+snippet uv_ip4_addr int uv_ip4_addr(const char* ip, int port, struct sockaddr_in* addr)
+	uv_ip4_addr(${1:const char* ip}, ${2:int port}, ${3:struct sockaddr_in* addr});
+snippet uv_ip6_addr int uv_ip6_addr(const char* ip, int port, struct sockaddr_in6* addr)
+	uv_ip6_addr(${1:const char* ip}, ${2:int port}, ${3:struct sockaddr_in6* addr});
+snippet uv_ip4_name int uv_ip4_name(const struct sockaddr_in* src, char* dst, size_t size)
+	uv_ip4_name(${1:const struct sockaddr_in* src}, ${2:char* dst}, ${3:size_t size});
+snippet uv_ip6_name int uv_ip6_name(const struct sockaddr_in6* src, char* dst, size_t size)
+	uv_ip6_name(${1:const struct sockaddr_in6* src}, ${2:char* dst}, ${3:size_t size});
+snippet uv_inet_ntop int uv_inet_ntop(int af, const void* src, char* dst, size_t size)
+	uv_inet_ntop(${1:int af}, ${2:const void* src}, ${3:char* dst}, ${4:size_t size});
+snippet uv_inet_pton int uv_inet_pton(int af, const char* src, void* dst)
+	uv_inet_pton(${1:int af}, ${2:const char* src}, ${3:void* dst});
+snippet uv_exepath int uv_exepath(char* buffer, size_t* size)
+	uv_exepath(${1:char* buffer}, ${2:size_t* size});
+snippet uv_cwd int uv_cwd(char* buffer, size_t* size)
+	uv_cwd(${1:char* buffer}, ${2:size_t* size});
+snippet uv_chdir int uv_chdir(const char* dir)
+	uv_chdir(${1:const char* dir});
+snippet uv_get_total_memory uint64_t uv_get_total_memory(void)
+	uv_get_total_memory(${1:void});
+snippet uv_hrtime uint64_t uv_hrtime(void)
+	uv_hrtime(${1:void});
+
